@@ -1,5 +1,5 @@
 export default function Page() {
     return (
-        <h1>Slug Page</h1>
+        <h1>Meal Details Page</h1>
     );
 }
