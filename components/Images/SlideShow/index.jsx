@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { images } from "@/utils/constants";
+import { images } from "@/lib/constants";
 import classes from "./slideShow.module.css";
 
 export default function ImageSlideShow() {
