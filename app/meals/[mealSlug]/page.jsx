@@ -4,9 +4,12 @@ import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 
 export default function MealDetailsPage({ params }) {
-  const meal = getMeal(params.meal);
+  const meal = getMeal(params.mealSlug);
+
   if(!meal) notFound();
-  meal.instuctions = meal.instuctions.replace(/\n/g, '<br/>');
+  
+  meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
+
   return (
     <>
       <header className={classes.header}>
@@ -23,10 +26,8 @@ export default function MealDetailsPage({ params }) {
       </header>
       <main>
         <p
-          className={classes.instuctions}
-          dangerouslySetInnerHTML={{
-            __html: meal.instuctions,
-          }}
+          className={classes.instructions}
+          dangerouslySetInnerHTML={{ __html: meal.instructions }}
         ></p>
       </main>
     </>
